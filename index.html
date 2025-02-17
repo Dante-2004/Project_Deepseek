@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation System</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        /* Retain Netflix-inspired styling for compatibility */
+        body {
+            font-family: Italic, fantasy;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #141414;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('ozark.jpg') center/cover no-repeat;
+            color: #fff;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 15px;
+            color: #e50914;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 25px;
+        }
+
+        .search-bar {
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .search-bar input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            background-color: #e50914;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #bf0810;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 40px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('spidermanus.jpg') center/cover no-repeat;
+            border-radius: 10px;
+        }
+
+        .feature {
+            margin: 10px;
+            padding: 20px;
+            background: rgba(32, 32, 32, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            text-align: center;
+            flex: 1 1 300px;
+            color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #141414;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Movie Recommendation System</h1>
+    </header>
+
+    <section class="hero">
+        <h1>Elevate your Entertainment!</h1>
+        <p>Discover personalized movie recommendations tailored just for you!</p>
+    </section>
+
+    <div class="search-bar">
+        <!-- Form integrated with backend -->
+        <form action="/recommend" method="GET" id="searchForm">
+            <input type="text" name="movie" id="movieInput" placeholder="Search for movies..." required>
+            <button type="submit" id="searchButton">Search</button>
+        </form>
+    </div>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Personalized Recommendations</h3>
+            <p>Get suggestions based on your viewing history and preferences.</p>
+        </div>
+        <div class="feature">
+            <h3>Top Trending Movies</h3>
+            <p>Stay updated with the latest and most popular movies.</p>
+        </div>
+        <div class="feature">
+            <h3>Advanced Search</h3>
+            <p>Find movies by genre, year, or even your favorite actor.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MovieMatch. All rights reserved.</p>
+    </footer>
+    <script src="static/js/script.js"></script>
+</body>
+</html>
